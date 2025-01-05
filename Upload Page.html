@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html  >
+<head>
+     
+    <title>Sharing is caring</title>
+   <style>
+            body{
+                display: flex;
+                justify-content: center;  
+                margin-top: 250px;
+                font-family:Arial, Helvetica, sans-serif;    
+                background-color:  rgba(232, 233, 226, 0.8);
+            }
+            #form{
+                border: 2px solid rgb(148, 159, 125);
+                border-radius: 10px;
+                padding: 15px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+                background-color:rgb(72, 84, 63);
+                color: rgb(232, 233, 226);
+                text-transform: capitalize;
+                     
+            }
+           
+             
+        #header {
+            width: 100%;
+            background-color:  #fff;
+            padding: 10px 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #header nav {
+            display: flex;
+            align-items: center;
+            padding-right: 10px;
+        }
+
+        a {
+            color: #45553D;
+            text-decoration: none;
+            text-transform: capitalize;
+            font-weight: bold;
+            padding: 9px 42px;
+            margin-left: 10px;
+            border-radius: 5px;
+        }
+
+        #header a:hover {
+            background-color: rgb(112, 125, 97);
+            border-radius: 5px;
+            color: rgb(14, 18, 14);
+        }
+
+        #header img {
+            height: 50px;
+        }
+
+        #login {
+            background-color: #C4C8AC;
+            color: #45553D;
+            border: 2px solid #C4C8AC;
+            border-radius: 6px;
+            padding: 10px 10px;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        #login:hover {
+            background-color: #45553D;
+            color: #C4C8AC;
+        } 
+            #headertable{
+                text-align:center;
+                font-size: 24px;
+                color: rgb(197, 200, 175);
+            }
+            #button ,#submitButton{
+                background-color: rgb(112, 125, 97);
+                color: rgb(232, 233, 226);
+            }   
+    </style>
+</head>
+<body>
+    <div id="header">
+        <nav>
+            <img src="Image/Logo.png">
+            <a href="Home Page.html">home</a>
+            <a href="About Us.html">about us </a>
+            <a href="Product Page.html" id="login" >products</a>
+            <a href="Gallery.html"  >gallery</a>
+            <a href="contact us.html">contact us</a>
+            <a href="FAQ.html">FAQ</a>
+            <a href="Blog Page.html">blog</a>
+            <a href="Case Studies.html">case studies</a>
+            <a href="Log in.html"  >login</a>
+        </nav>
+     </div>
+    <div id="form">
+        <form id="bookForm">
+            <table>
+                <tr>
+                    <td id="headertable" colspan="2">
+                        <p>Upload Your Book and Make a Difference</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Book Name</label>
+                    </td>
+                    <td>
+                        <input  id="bookName" type="text" required size="24">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Author Name</label>
+                    </td>
+                    <td>
+                        <input id="authorName"  type="text" required size="24">
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="5">
+                        <p>Choose a Major</p>
+                    </td>
+                    <td>
+                        <input name="specialization" id="General Faculty" value="General Faculty"  type="radio"  required>
+                        <label>General Faculty</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input name="specialization" id="Software Engineering" value="Software Engineering" type="radio" required>
+                        <label>Software Engineering</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input name="specialization" id="Computer Science"  value="Computer Science" type="radio" required>
+                        <label>Computer Science</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input name="specialization" id="Cyber Security" value="Cyber Security"  type="radio" required>
+                        <label>Cyber Security</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input name="specialization" id="Artificial Intelligence" value="Artificial Intelligence" type="radio" required>
+                        <label>Artificial Intelligence</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="2">
+                        <p>Choose Contact Method</p>
+                    </td>
+                    <td>
+                        <input name="contactMethod" id="contactValueemail" value="Email" type="radio" required onclick="contactInput('email')">
+                        <label>Email</label>
+                        <input id="emailInput" type="email"  style="display: none;">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input name="contactMethod" id="contactValuewhatsApp" value="WhatsApp" type="radio" required onclick="contactInput('whatsApp')">
+                        <label>WhatsApp</label>
+                        <input id="whatsAppInput" type="text" style="display: none;">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" id="submitButton">
+                    </td>
+                    <td>
+                        <input type="reset" id="button">                
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    
+    <script>
+        function contactInput(input){
+            if (input === 'email'){
+                document.getElementById('emailInput').style.display = 'block';
+                document.getElementById('whatsAppInput').style.display = 'none';
+            } else {
+                document.getElementById('whatsAppInput').style.display = 'block';
+                document.getElementById('emailInput').style.display = 'none';    
+            }
+        }
+        function specialization(){
+            var specialization;
+            if(document.getElementById('General Faculty').checked=== true){
+                specialization=document.getElementById('General Faculty').value;
+            }
+            else if(document.getElementById('Software Engineering').checked === true){
+                specialization=document.getElementById('Software Engineering').value;
+            }
+            else if(document.getElementById('Computer Science').checked === true){
+                specialization=document.getElementById('Computer Science').value;
+            }
+            else if(document.getElementById('Cyber Security').checked === true){
+                specialization=document.getElementById('Cyber Security').value;
+            }
+            else if(document.getElementById('Artificial Intelligence').checked === true){
+                specialization=document.getElementById('Artificial Intelligence').value;
+            }
+            return specialization;
+        }
+        function contactMethod(){
+            var contactValue;
+            if(document.getElementById('contactValueemail').checked === true){
+                contactValue = document.getElementById('emailInput').value;
+            }
+            else if(document.getElementById('contactValuewhatsApp').checked === true){
+                contactValue = document.getElementById('whatsAppInput').value;
+            }
+            return contactValue;
+        }
+        var submitButton = document.getElementById('submitButton');
+        function dataform(){
+            var bookName = document.getElementById('bookName').value;
+            var authorName = document.getElementById('authorName').value;
+            var specializationValue = specialization();
+            var contactValue = contactMethod();
+            var formData = { bookName, authorName,specialization: specializationValue,contactMethod: contactValue};
+            var books = JSON.parse(localStorage.getItem('books')) || []; 
+            books.push(formData);
+            localStorage.setItem('books' , JSON.stringify(books));
+            alert("The book has been added successfully! Thank you for enriching our library ");
+            document.getElementById('bookForm').reset();
+        }
+        submitButton.addEventListener('click' , dataform);   
+    </script>
+</body>
+</html>

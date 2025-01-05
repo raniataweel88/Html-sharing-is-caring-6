@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Sharing is Caring</title>
+    <style>
+        
+        body {
+            margin: 0;
+            background-image: url(Image/bggallery.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: 'Roboto', sans-serif;
+            color: #0D120E;
+        }
+
+        /*Header*/
+        #header {
+            width: 100%;
+            background-color: #fff;
+            padding: 10px 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #header nav {
+            display: flex;
+            align-items: center;
+            padding-right: 10px;
+        }
+
+        a {
+            color: #45553D;
+            text-decoration: none;
+            text-transform: capitalize;
+            font-weight: bold;
+            padding: 9px 42px;
+            margin-left: 10px;
+            border-radius: 5px;
+        }
+
+        #header a:hover {
+            background-color: rgb(112, 125, 97);
+            border-radius: 5px;
+            color: rgb(14, 18, 14);
+        }
+
+        #header img {
+            height: 50px;
+        }
+
+        #login {
+            background-color: #C4C8AC;
+            color: #45553D;
+            border: 2px solid #C4C8AC;
+            border-radius: 6px;
+            padding: 10px 10px;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        #login:hover {
+            background-color: #45553D;
+            color: #C4C8AC;
+        }
+
+        /* h1 {
+            background-color: rgb(197, 200, 175);
+
+            color: rgb(14, 18, 14);
+            text-align: center;
+            margin-top: 100px;
+            text-transform: uppercase;
+            border-bottom: 3px solid rgb(72, 84, 63);
+            display: inline-block;
+            padding-bottom: 10px;
+        } */
+
+        #bookDetails, h1  {
+            background-color: rgb(197, 200, 175);
+            border: 2px solid rgb(148, 159, 125);
+            border-radius: 10px;
+            padding: 20px;
+            color: rgb(72, 84, 63);
+            font-size: 18px;
+            line-height: 1.8;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 40px auto;
+        }
+        h1{
+            margin-top: 100px;
+        }
+        #products {
+            width: 60px;
+            height: 60px;
+            background-color: #48543F;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        #products a {
+            color: rgb(232, 233, 226);
+            font-size: 28px;
+            font-weight: bold;
+            text-decoration: none;
+            line-height: 60px;
+            padding: 0px;
+            margin-left: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Header-->
+    <div id="header">
+        <nav>
+            <img src="Image/Logo.png" alt="Logo">
+            <a href="Home Page.html">home</a>
+            <a href="About Us.html">about us</a>
+            <a href="Product Page.html">products</a>
+            <a href="Gallery.html" id="login">gallery</a>
+            <a href="Contact Us.html">contact us</a>
+            <a href="FAQ.html">FAQ</a>
+            <a href="Blog Page.html">blog</a>
+            <a href="Case Studies.html">case studies</a>
+            <a href="Log in.html">login</a>
+        </nav>
+    </div>
+
+   
+    <br>
+    <div>
+        <h1>Book Details</h1>
+        <div>
+       
+            <div id="bookDetails"></div>
+        </div>
+    </div>
+    <div id="products">
+        <a href="Upload Page.html">+</a>
+    </div>
+    <script>
+        var books = JSON.parse(localStorage.getItem('books')) || [];
+        var bookDetails = document.getElementById('bookDetails');
+        if (books.length > 0) {
+            books.forEach((book, index) => {
+                bookDetails.innerHTML += `
+                    <div>
+                        <h3>Book ${index + 1}</h3>
+                        <p><strong>Book Name:</strong> ${book.bookName}</p>
+                        <p><strong>Author Name:</strong> ${book.authorName}</p>
+                        <p><strong>Specialization:</strong> ${book.specialization}</p>
+                        <p><strong>Contact Value:</strong> ${book.contactMethod}</p>
+                        <hr>
+                    </div>
+                `;
+            });
+        } else {
+            bookDetails.innerHTML = "<p>No books found!</p>";
+        }
+    </script>
+</body>
+
+</html>

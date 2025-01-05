@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sharing</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        body {
+            margin: 0;
+            background-color: #E8E9E0;
+            font-family: 'Roboto', sans-serif;
+            color: #0D120E;
+        }
+
+        /*Header*/
+        #header {
+            width: 100%;
+            background-color: #fff;
+            padding: 10px 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #header nav {
+            display: flex;
+            align-items: center;
+            padding-right: 10px;
+        }
+
+        a {
+            color: #45553D;
+            text-decoration: none;
+            text-transform: capitalize;
+            font-weight: bold;
+            padding: 9px 42px;
+            margin-left: 10px;
+            border-radius: 5px;
+        }
+
+        #header a:hover {
+            background-color: rgb(112, 125, 97);
+            border-radius: 5px;
+            color: rgb(14, 18, 14);
+        }
+
+        #header img {
+            height: 50px;
+        }
+
+        #login {
+            background-color: #C4C8AC;
+            color: #45553D;
+            border: 2px solid #C4C8AC;
+            border-radius: 6px;
+            padding: 10px 10px;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        #login:hover {
+            background-color: #45553D;
+            color: #C4C8AC;
+        }
+
+        .header2 {
+            height: 600px;
+            width: 100%;
+            background-color: #92A079;
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .intro {
+            font-size: 25px;
+            color: #E8E9E0;
+            line-height: 1.5;
+            max-width: 800px;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+            margin: 0 0 20px 0;
+        }
+
+        .login-but {
+            padding: 15px 30px;
+            font-size: 20px;
+            background: #45553D;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .login-but:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .img-header2 {
+            width: 350px;
+            height: auto;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--Header-->
+    <div id="header">
+        <nav>
+            <img src="Image/Logo.png">
+            <a href="Home Page.html" id="login">home</a>
+            <a href="About Us.html">about us</a>
+            <a href="Product Page.html">products</a>
+            <a href="Gallery.html">gallery</a>
+            <a href="Contact Us.html">contact us</a>
+            <a href="FAQ.html">FAQ</a>
+            <a href="Blog Page.html">blog</a>
+            <a href="Case Studies.html">case studies</a>
+            <a href="Log in.html">login</a>
+        </nav>
+    </div>
+
+    <div class="header2">
+        <div class="intro">
+            <p>
+                Here, you can easily and freely exchange books with others.<br>
+                Whether you're looking for a new book to read or want to share your books with others, we're here to
+                make it possible.
+            </p>
+        </div>
+        <button class="login-but" onclick="location.href='Log in.html'">Log in</button></div></body></html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sharing is caring</title>
+   <style>
+            body{
+                font-family:Arial, Helvetica, sans-serif;    
+                background-color:  rgba(232, 233, 226, 0.8);
+            }
+            #header {
+            width: 100%;
+            background-color: #fff;
+            padding: 10px 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #header nav {
+            display: flex;
+            align-items: center;
+            padding-right: 10px;
+        }
+
+        a {
+            color: #45553D;
+            text-decoration: none;
+            text-transform: capitalize;
+            font-weight: bold;
+            padding: 9px 42px;
+            margin-left: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        #header a:hover {
+            background-color: #6D7E5F;
+            color: #C4C8AC;
+        }
+
+        #header img {
+            height: 50px;
+        }
+
+        #login {
+            background-color: #C4C8AC;
+            color: #45553D;
+            border: 2px solid #C4C8AC;
+            border-radius: 6px;
+            padding: 10px 10px;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        #login:hover {
+            background-color: #45553D;
+            color: #C4C8AC;
+        }
+
+            .customer-reviews {
+                margin-top: 100px;
+                
+            }
+
+            .review {
+                margin-bottom: 20px;
+                display: inline-block;
+                width: 250px;
+                background-color: rgb(72, 84, 63);
+                padding: 10px;
+                border-radius: 8px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+                color: rgb(232, 233, 226);
+            }
+
+            .review img {
+                width: 100%;
+                border-radius: 5px;
+            }
+            .review p {
+                color: rgb(197, 200, 175);
+            }
+            .review button {
+                background-color: rgb(112, 125, 97);
+                color: rgb(232, 233, 226);
+                border: none;
+                padding: 5px 15px;
+                margin-top: 10px;
+                cursor: pointer;
+                text-transform: capitalize;
+                transition: background-color 0.3s;
+            }
+            .review button:hover {
+                background-color: rgb(148, 159, 125);
+            }
+            #headertable{
+                text-align:center;
+                font-size: 24px;
+                color: rgb(197, 200, 175);
+            }
+            #button ,#submitButton{
+                background-color: rgb(112, 125, 97);
+                color: rgb(232, 233, 226);
+            }
+            #products {
+                width: 60px;
+                height: 60px;
+                background-color: #48543f; 
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);   
+                 
+            }
+            #products a {
+                color: rgb(232, 233, 226);
+                font-size: 28px;
+                font-weight: bold;
+                text-decoration: none;
+                line-height: 60px;
+                padding: 0px;
+                margin-left: 0px; 
+            }
+           
+    </style>
+</head>
+<body>
+    <div id="header">
+        <nav>
+             <img src="Image/Logo.png">
+             <a href="Home Page.html">home</a>
+             <a href="About Us.html">about us </a>
+             <a href="Product Page.html" id="login">products</a>
+             <a href="Gallery.html">gallery</a>
+             <a href="contact us.html">contact us</a>
+             <a href="FAQ.html">FAQ</a>
+             <a href="Blog Page.html">blog</a>
+             <a href="Case Studies.html">case studies</a>
+             <a href="Log in.html" >login</a>
+        </nav>
+     </div>
+     <div id="products">
+        <a href="Upload Page.html">+</a>
+    </div>  
+     <section class="customer-reviews">
+        <h1>Sharing is caring</h1>
+        <p>Share your textbooks, help a fellow student, and make learning more accessible to everyone!</p>
+        <div class="review">
+            <img src="Image/Clean Code ΓÇô Robert C. Martin.jpeg" class="review-image"  id="a">
+            <p><strong>Book Name:</strong>Clean Code</p>
+            <p><strong>Author Name:</strong>Robert C. Martin</p>
+            <p><strong>Specialization:</strong>Programming Best Practices</p>
+            <button class="btn1" >
+                <a href="https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882">Discover this book</a>
+            </button>
+        </div>
+        <div class="review">
+            <img src="image/Design Patterns.jpeg" class="review-image" id="b">
+            <p><strong>Book Name:</strong>Design Patterns: Elements of Reusable Object-Oriented Software</p>
+            <p><strong>Author Name:</strong>Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides</p>
+            <p><strong>Specialization:</strong> Software Design</p>
+            <button class="btn1" >
+                <a href="https://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612">Discover this book</a>
+            </button>
+        </div>
+        <div class="review">
+            <img src="image/Artificial .jpeg" class="review-image"  id="c">
+            <p><strong>Book Name:</strong>Artificial Intelligence: A Modern Approach</p>
+            <p><strong>Author Name:</strong>Artificial Intelligence: A Modern Approach</p>
+            <p><strong>Specialization:</strong> Artificial Intelligence</p>
+            <button class="btn1" >
+                <a href="https://www.amazon.com/Artificial-Intelligence-Modern-Stuart-Russell/dp/0134610997">Discover this book</a>
+            </button>
+        </div>
+         <div class="review">
+            <img src="image/Hands-On Machine Learning with .jpeg"  class="review-image"  id="a">
+            <p><strong>Book Name:</strong>Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow</p>
+            <p><strong>Author Name:</strong>Aurélien Géron</p>
+            <p><strong>Specialization:</strong> Software Design</p>
+            <button class="btn1" >
+                <a href="https://www.amazon.com/Hands-Machine-Learning-Scikit-Learn-TensorFlow/dp/1492032646">Discover this book</a>
+            </button>
+        </div>
+        <div class="review">
+            <img src="image/Hacking.jpeg"class="review-image" id="b">
+            <p><strong>Book Name:</strong>Hacking: The Art of Exploitation</p>
+            <p><strong>Author Name:</strong>Jon Erickson</p>
+            <p><strong>Specialization:</strong>Ethical Hacking</p>
+            <button class="btn1" >
+                <a href="https://www.amazon.com/Hacking-Art-Exploitation-2nd-Edition/dp/1593271441">Discover this book</a>
+            </button>
+        </div>
+        <div class="review">
+            <img src="image/The Web.jpeg" class="review-image"  id="c">
+            <p><strong>Book Name:</strong> The Web Application Hacker's Handbook</p>
+            <p><strong>Author Name:</strong>Dafydd Stuttard, Marcus Pinto</p>
+            <p><strong>Specialization:</strong>Web Application Security</p>
+            <button class="btn1" >
+                <a href="https://www.amazon.com/Web-Application-Hackers-Handbook-Exploiting/dp/1118026470">Discover this book</a>
+            </button>
+        </div>
+        <div class="review">
+            <img src="image/Operating System Concepts.jpeg" class="review-image"  id="c">
+            <p><strong>Book Name:</strong>Operating System Concepts</p>
+            <p><strong>Author Name:</strong>Abraham Silberschatz, Peter B. Galvin, Greg Gagne</p>
+            <p><strong>Specialization:</strong>Operating Systems</p>
+            <button class="btn1" >
+                <a href="https://www.amazon.com/Operating-System-Concepts-Abraham-Silberschatz/dp/1119800366">Discover this book</a>
+            </button>
+        </div>
+        <div class="review">
+            <img src="image/Database System Concepts2.jpg" class="review-image"  id="c">
+            <p><strong>Book Name:</strong>Database System Concepts</p>
+            <p><strong>Author Name:</strong>Abraham Silberschatz, Henry F. Korth, S. Sudarshan</p>
+            <p><strong>Specialization:</strong>Database Management Systems</p>
+            <button class="btn1" >
+                <a href="https://www.amazon.com/Database-System-Concepts-Abraham-Silberschatz/dp/0078022150">Discover this book</a>
+            </button>
+        </div>
+        <div class="review">
+            <img src="image/SQL in 10 .jpeg" class="review-image"  id="c">
+            <p><strong>Book Name:</strong>SQL in 10 Minutes, Sams Teach Yourself</p>
+            <p><strong>Author Name:</strong>Ben Forta</p>
+            <p><strong>Specialization:</strong> SQL Programming</p>
+            <button class="btn1" >
+                <a href="https://www.amazon.com/SQL-Minutes-Sams-Teach-Yourself/dp/0672336073">Discover this book</a>
+            </button>
+        </div>
+        <div class="review">
+            <img src="image/Software Engineering.jpeg" class="review-image"  id="c">
+            <p><strong>Book Name:</strong>Software Engineering: A Practitioner's Approach</p>
+            <p><strong>Author Name:</strong>Roger S. Pressman</p>
+            <p><strong>Specialization:</strong>Software Engineering Principles and Practices</p>
+            <button class="btn1" >
+                <a href="https://www.amazon.com/Software-Engineering-Practitioners-Roger-Pressman/dp/0078022126">Discover this book</a>
+            </button>
+        </div>
+    </section>
+
+</body>
+</html>

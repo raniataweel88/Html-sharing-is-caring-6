@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>sharing-AboutUs</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #E8E9E0;
+            margin: 0;
+            padding: 0;
+            color: #0D120E;
+        }
+
+        /*Header*/
+        #header {
+            width: 100%;
+            background-color: #fff;
+            padding: 10px 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #header nav {
+            display: flex;
+            align-items: center;
+            padding-right: 10px;
+        }
+
+        a {
+            color: #45553D;
+            text-decoration: none;
+            text-transform: capitalize;
+            font-weight: bold;
+            padding: 9px 42px;
+            margin-left: 10px;
+            border-radius: 5px;
+        }
+
+        #header a:hover {
+            background-color: rgb(112, 125, 97);
+            border-radius: 5px;
+            color: rgb(14, 18, 14);
+        }
+
+        #header img {
+            height: 50px;
+        }
+
+        #login {
+            background-color: #C4C8AC;
+            color: #45553D;
+            border: 2px solid #C4C8AC;
+            border-radius: 6px;
+            padding: 10px 10px;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        #login:hover {
+            background-color: #45553D;
+            color: #C4C8AC;
+        }
+
+        /* FAQ Section */
+        .faq {
+            margin: 100px auto;
+            padding: 40px;
+            max-width: 900px;
+            background: linear-gradient(to bottom, #ffffff, #f1f5e6);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            border-radius: 20px;
+        }
+
+        .faq h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: #4b5e2a;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        .faq-item {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 15px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .faq-item h3 {
+            font-size: 22px;
+            color: #333;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .faq-item h3:hover {
+            color: #4b5e2a;
+            text-decoration: underline;
+        }
+
+        .faq-item p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .faq-item:hover {
+            background-color: #f9fbf4;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--Header-->
+    <div id="header">
+        <img src="Image/Logo.png" alt="Logo">
+        <nav>
+            <a href="Home Page.html">home</a>
+            <a href="About Us.html">about us</a>
+            <a href="" target="_blank">products</a>
+            <a href="Gallery.html">gallery</a>
+            <a href="Contact Us.html">contact us</a>
+            <a href="FAQ.html" id="login">FAQ</a>
+            <a href="Blog Page.html">blog</a>
+            <a href="Case Studies.html">case studies</a>
+            <a href="Log in.html"  >login</a>
+        </nav>
+    </div>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <h3>What is this platform about?</h3>
+            <p>This platform allows users to connect, share, and exchange ideas or items easily and conveniently.</p>
+        </div>
+        <div class="faq-item">
+            <h3>How can I register?</h3>
+            <p>Click on the "Login" button at the top of the page and follow the registration process.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Is there a fee to use this platform?</h3>
+            <p>No, our platform is completely free to use.</p>
+        </div>
+    </section>
+
+</body>
+
+</html>

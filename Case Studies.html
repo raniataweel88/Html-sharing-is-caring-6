@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ 
+    <title>Case Studies</title>
+    <style>
+         
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #E8E9E0;
+            margin: 0;
+            padding: 0;
+            color: #0D120E;
+        }
+
+        /*Header*/
+        #header {
+            width: 100%;
+            background-color: #FFFFFF;
+            padding: 10px 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #header nav {
+            display: flex;
+            align-items: center;
+            padding-right: 10px;
+        }
+
+        a {
+            color: #45553D;
+            text-decoration: none;
+            text-transform: capitalize;
+            font-weight: bold;
+            padding: 9px 42px;
+            margin-left: 10px;
+            border-radius: 5px;
+        }
+
+        #header a:hover {
+            background-color: rgb(112, 125, 97);
+            border-radius: 5px;
+            color: rgb(14, 18, 14);
+        }
+
+        #header img {
+            height: 50px;
+        }
+
+        #login {
+            background-color: #C4C8AC;
+            color: #45553D;
+            border: 2px solid #C4C8AC;
+            border-radius: 6px;
+            padding: 10px 10px;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        #login:hover {
+            background-color: #45553D;
+            color: #C4C8AC;
+        }
+
+        /*Case Studies*/
+        .container {
+            max-width: 1200px;
+            margin: 100px auto;
+            padding: 20px;
+        }
+
+        .case-study {
+            background-color: #FFFFFF;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+
+        .case-study h2 {
+            color: #45553D;
+            margin-bottom: 10px;
+        }
+
+        .case-study p {
+            color: #6D7E5F;
+            line-height: 1.6;
+        }
+
+        .case-study a {
+            display: inline-block;
+            margin-top: 10px;
+            color: #C4C8AC;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .case-study a:hover {
+            color: #0D120E;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Header-->
+    <div id="header">
+        <nav>
+            <img src="Image/Logo.png" alt="Logo">
+            <a href="Home Page.html">home</a>
+            <a href="About Us.html">about us</a>
+            <a href="Product Page.html" target="_blank">products</a>
+            <a href="Gallery.html">gallery</a>
+            <a href="Contact Us.html">contact us</a>
+            <a href="FAQ.html">FAQ</a>
+            <a href="Blog Page.html">blog</a>
+            <a href="Case Studies.html" id="login">case studies</a>
+            <a href="Log in.html"  >login</a>
+        </nav>
+    </div>
+
+    <!--Case Studies-->
+    <div class="container">
+        <div class="case-study">
+            <h2>Case Study 1: Enhancing Educational Tools</h2>
+            <p>Discover how our innovative tools have transformed the learning experience for students in various educational institutions. By integrating advanced technology, we've made learning more engaging and accessible.</p>
+            <a href="#">Read More</a>
+        </div>
+
+        <div class="case-study">
+            <h2>Case Study 2: Streamlining Business Processes</h2>
+            <p>Learn how we helped a major corporation streamline their business processes, resulting in increased efficiency and significant cost savings. Our tailored solutions are designed to meet the unique needs of each client.</p>
+            <a href="#">Read More</a>
+        </div>
+
+        <div class="case-study">
+            <h2>Case Study 3: Community Engagement Initiatives</h2>
+            <p>Explore our community engagement initiatives that have positively impacted local communities. Our projects focus on sustainability, education, and empowerment to create lasting change.</p>
+            <a href="#">Read More</a>
+        </div>
+    </div>
+</body>
+
+</html>

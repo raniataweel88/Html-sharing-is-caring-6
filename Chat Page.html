@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Chatting Page</title>
+    <style>
+        /*Header*/
+        #header {
+            width: 100%;
+            background-color: #fff;
+            padding: 10px 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #header nav {
+            display: flex;
+            align-items: center;
+            padding-right: 10px;
+        }
+
+        a {
+            color: #45553d;
+            text-decoration: none;
+            text-transform: capitalize;
+            font-weight: bold;
+            padding: 9px 42px;
+            margin-left: 10px;
+            border-radius: 5px;
+        }
+
+        #header a:hover {
+            background-color: rgb(112, 125, 97);
+            border-radius: 5px;
+            color: rgb(14, 18, 14);
+        }
+
+        #header img {
+            height: 50px;
+        }
+
+        #Product-Header {
+            background-color: #c4c8ac;
+            color: #45553d;
+            border: 2px solid #c4c8ac;
+            border-radius: 6px;
+            padding: 10px 10px;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        #Product-Header:hover {
+            background-color: #45553d;
+            color: #c4c8ac;
+        }
+
+        /*Body*/
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            /* تأكيد أن ارتفاع الجسم هو ارتفاع الشاشة بالكامل */
+        }
+
+        /*Chatting frame*/
+        .chat-container {
+            width: 500px;
+            max-width: 100%;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chat-header {
+            padding: 15px;
+            background: #45553d;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        .chat-window {
+            flex: 1;
+            padding: 15px;
+            overflow-y: auto;
+            background-color: #e5e5e5;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .message-container {
+            flex: 1;
+            padding: 15px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .message {
+            margin-bottom: 15px;
+            padding: 10px 15px;
+            border-radius: 10px;
+            background-color: #fff;
+            max-width: 70%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .message.sent {
+            align-self: flex-end;
+            background-color: #c4c8ac;
+        }
+
+        .message.received {
+            align-self: flex-start;
+            background-color: #f8d7da;
+        }
+
+        .input-container {
+            display: flex;
+            border-top: 1px solid #ddd;
+            background-color: #45553d;
+            padding: 10px;
+        }
+
+        #message-input {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+            font-size: 16px;
+        }
+
+        #message-input:focus {
+            border-bottom: 2px solid #E8E9E0;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #c4c8ac;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #6d7e57;
+        }
+    </style>
+</head>
+
+<body id="body">
+    <!--Header-->
+    <div id="header">
+        <nav>
+            <img src="Image/Logo.png" alt="Logo">
+            <a href="Home Page.html">home</a>
+            <a href="About Us.html">about us </a>
+            <a href="Chat Page.html"   id="Product-Header">products</a>
+            <a href="Gallery.html">gallery</a>
+            <a href="contact us.html">contact us</a>
+            <a href="FAQ.html">FAQ</a>
+            <a href="Blog Page.html">blog</a>
+            <a href="Case Studies.html">case studies</a>
+            <a href="Log in.html">login</a>
+        </nav>
+    </div>
+    <!--Chatting -->
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1>Chat Room</h1>
+        </div>
+        <div class="chat-window">
+            <div class="message-container" id="message-container"></div>
+            <div class="input-container">
+                <input type="text" placeholder="Type your message here..." id="message-input">
+                <button id="send-btn">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // عند تحميل الصفحة
+        document.addEventListener('DOMContentLoaded', () => {
+            const sendBtn = document.getElementById('send-btn');
+            const messageInput = document.getElementById('message-input');
+            const chatMessages = document.getElementById('message-container');
+
+            // وظيفة لإضافة رسالة إلى الشات
+            function addMessage(content, type) {
+                const messageElement = document.createElement('div');
+                messageElement.classList.add('message', type);
+                messageElement.textContent = content;
+                chatMessages.appendChild(messageElement);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+
+            // عند النقر على زر الإرسال
+            sendBtn.addEventListener('click', () => {
+                const message = messageInput.value.trim();
+                if (message) {
+                    addMessage(message, 'sent');
+                    messageInput.value = '';
+                    // استجابة تلقائية
+                    setTimeout(() => {
+                        addMessage('This is an automatic response.', 'received');
+                    }, 1000);
+                }
+            });
+
+            // إرسال الرسالة عند الضغط على Enter
+            messageInput.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter') {
+                    sendBtn.click();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

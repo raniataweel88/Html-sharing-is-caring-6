@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    /*Header*/
+        #header {
+            width: 100%;
+            background-color:  #fff;
+            padding: 10px 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #header nav {
+            display: flex;
+            align-items: center;
+            padding-right: 10px;
+        }
+
+        a {
+            color: #45553D;
+            text-decoration: none;
+            text-transform: capitalize;
+            font-weight: bold;
+            padding: 9px 42px;
+            margin-left: 10px;
+            border-radius: 5px;
+        }
+
+        #header a:hover {
+            background-color: rgb(112, 125, 97);
+            border-radius: 5px;
+            color: rgb(14, 18, 14);
+        }
+
+        #header img {
+            height: 50px;
+        }
+
+        #login {
+            background-color: #C4C8AC;
+            color: #45553D;
+            border: 2px solid #C4C8AC;
+            border-radius: 6px;
+            padding: 10px 10px;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        #login:hover {
+            background-color: #45553D;
+            color: #C4C8AC;
+        }
+    body {
+        font-family: Arial;
+        padding: 20px;
+        background-color: rgb(232, 233, 226);
+        color: rgb(54, 61, 48);
+    }
+    .header {
+        padding: 20px;
+        text-align: center;
+        background-color: rgb(148, 159, 125); 
+        border-radius: 10px;
+    }   
+    .rebortDiv  {   
+    float: left;
+    width: 75%;
+    border-radius: 10px;
+    }
+    .new {
+    float: left;
+    width: 23%;
+    padding-left: 20px;
+    border-radius: 10px;
+    }
+    .news-item {
+        background-color: #FFFFFF;
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .news-item h3 {
+        color: #45553D;
+        margin-bottom: 10px;
+    }
+
+    .news-item p {
+        color: #6D7E5F;
+    }
+
+    .news-item a {
+        color: #45553D;
+        font-weight: bold;
+        text-decoration: none;
+}
+
+    .card {
+    background-color: rgb(197, 200, 175);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    }
+    .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+    #products {
+                width: 60px;
+                height: 60px;
+                background-color: #48543f; 
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);    
+            }
+            #products a {
+                color: rgb(232, 233, 226);
+                font-size: 28px;
+                font-weight: bold;
+                text-decoration: none;
+                line-height: 60px;
+                padding: 0px;
+                margin-left: 0px; 
+            }
+</style>
+</head>
+<body>
+<!--Header-->
+<div id="header">
+    <nav>
+        <img src="Image/Logo.png">
+        <a href="Home Page.html">home</a>
+        <a href="About Us.html">about us </a>
+        <a href="Upload Page.html" >products</a>
+        <a href="Gallery.html"  >gallery</a>
+        <a href="contact us.html">contact us</a>
+        <a href="FAQ.html">FAQ</a>
+        <a href="Blog Page.html" id="login">blog</a>
+        <a href="Case Studies.html">case studies</a>
+        <a href="Log in.html"   >login</a>
+    </nav>
+</div>
+<div class="header">
+  <h1>Sharing is Caring</h1>
+</div>
+
+<div class="row">
+  <div class="rebortDiv ">
+    <div class="card">
+            <h2>Technology in Education</h2>
+            <img src="Image/background _blog.jpeg" alt="background">
+            <p>
+                Discover how technology is revolutionizing higher education and opening new opportunities for students.
+                From enhancing learning experiences to changing the way books are exchanged among students, the digital
+                age is transforming how we access knowledge. Read the GEM Report 2021/2 and learn about the significant
+                role technology plays in education, along with the challenges and opportunities it brings. Be part of
+                the
+                future and explore how digital platforms can enhance a more interactive and effective learning
+                 environment.
+            </p>
+                   
+                        <a href="https://gem-report-2023.unesco.org/ar/التكنولوجيا-في-التعليم">Read more</a>
+      
+    </div>
+    <div class="card">
+            <h2>Educational Technology: Concept, Importance, and Benefits</h2>
+            <img src="Image/BookswapMilano.jpg" alt="background">
+            <p>
+            Curious about how educational technology is reshaping learning? Dive into this article to explore the powerful impact of tech in the classroom, from enhancing
+                student engagement to simplifying the way we exchange books and resources. Learn how embracing innovation
+                can transform education and open doors to a more efficient, interactive learning experience. Don’t miss out
+                on the future of education! </p>
+                
+                     <ah href="https://www.extramarks.com/blogs/what-is-education-technology/#:~:text=It%20boosts%20productivity%20and%20keeps,learn%20remotely%20with%20their%20peers">Read
+                    more</a>
+                 
+      
+     </div>
+  </div>
+  <div class="new">       
+    <div class="card">
+            <h2>Every small step brings you closer to your big dream</h2>
+
+    </div>
+    <div class="card">
+        <div>
+            <h2>Recent News</h2>
+            <div class="news-item">
+                <h3>The Role of Technology in Education</h3>
+                <p>Explore how technology is shaping the future of education and its impact on learning environments.</p>
+                <a href="https://edtechmagazine.com/higher/article/2020/02/role-technology-higher-education"
+                    target="_blank">Read more</a>
+            </div>
+            <div class="news-item">
+                <h3>Latest Trends in Software Development</h3>
+                <p>Stay updated on the emerging trends in software development and what to expect in the coming years.</p>
+                <a href="https://techcrunch.com/" target="_blank">Read more</a>
+            </div>
+        </div>
+      
+    </div>
+  </div>
+  <div id="products">
+    <a href="Chat Page.html">chat</a>
+</div>
+</div>
+
+</body>
+</html>
